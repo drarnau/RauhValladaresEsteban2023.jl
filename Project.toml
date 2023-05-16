@@ -1,7 +1,7 @@
 name = "RauhValladaresEsteban2023"
 uuid = "efc4f886-d18d-4beb-9983-253443a618c6"
 authors = ["drarnau <arnau.valladares@gmail.com>"]
-version = "0.1.0"
+version = "1.0.0"
 
 [deps]
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
