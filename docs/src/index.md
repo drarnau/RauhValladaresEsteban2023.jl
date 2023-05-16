@@ -1,0 +1,4 @@
+# RauhValladaresEsteban2023.jl
+[This package](https://github.com/drarnau/RauhValladaresEsteban2023) solves the on-the-job human capital accumulation model with heterogeneity in the initial human capital endowment and the lifelong ability to accumulate human capital, and endogenous labor supply at the extensive and intensive margins in [_On the Black-White Gaps in Labor Supply and Earnings over the Lifecycle in the US_](https://arnau.eu/RaceGap.pdf) by [Christopher Rauh](https://sites.google.com/site/econrauh/) and [Arnau Valladares-Esteban](https://arnau.eu/).
+
+In [Model](model.md), we provide the equations that describe the model that this package solves. All the functions and types used in the package are documented in the Library: [public](lib/public.md) and [internal](lib/internals.md) functionality.
