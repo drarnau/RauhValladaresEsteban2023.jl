@@ -25,6 +25,6 @@ Produces all the figures and tables displayed below and reported in the paper.
 ### [Counterfactual experiments](tables/counterfactuals.pdf)
 <object data="tables/counterfactuals.pdf" type="application/pdf" width="100%">
     <embed src="tables/counterfactuals.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="tables/counterfactuals.pdf">Download PDF</a>.</p>
+        <p>The PDF cannot be displayed in the GitHub README file. Please clik here to view it: <a href="tables/counterfactuals.pdf">View PDF</a>.</p>
     </embed>
 </object>
