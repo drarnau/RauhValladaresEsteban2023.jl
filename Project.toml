@@ -16,3 +16,6 @@ Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
 Tectonic = "9ac5f52a-99c6-489f-af81-462ef484790f"
 UnPack = "3a884ed6-31ef-47d7-9d2a-63182c4928ed"
+
+[compat]
+Documenter = "0.27"
