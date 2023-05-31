@@ -89,8 +89,8 @@ function simulateindices(
 
     return reduce(
         hcat,
-        simulate_indices.(Ref(MC), fill(nagents, t₀ + nperiods))
-        )[:, (t₀+1):end]
+        simulate_indices.(Ref(MC), fill(t₀ + nperiods, nagents))
+        )'[:, (t₀+1):end]
 end
 
 """
