@@ -1,0 +1,28 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[capposition=top]{floatrow}
+\newcommand{\rowgroup}[1]{\hspace{-1em}#1}
+\usepackage{fullpage}
+\usepackage{multirow}
+\usepackage{array,booktabs}
+
+\begin{document}
+\date{}
+\thispagestyle{empty}
+
+
+\begin{table}[H]
+\footnotesize
+\centering
+
+\begin{tabular}{l*{6}{cc}}
+\hline
+\hline
+\hspace{-0.2cm}\textit{Deciles 1-5}\\
+&\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}                    &\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)} &\multicolumn{1}{c}{(5)} \\
+\input{reg_hearnings_1.tex}
+Region fixed effects  &\multicolumn{1}{c}{Yes}   &\multicolumn{1}{c}{Yes}   &\multicolumn{1}{c}{Yes}   &\multicolumn{1}{c}{Yes} &\multicolumn{1}{c}{Yes}     \\
+\hline
+\hline
+\end{tabular}
+\end{table}
+\end{document}

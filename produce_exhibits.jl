@@ -4,6 +4,16 @@ using RauhValladaresEsteban2023
 using StatsBase
 using Tectonic
 
+## Run data work in Stata
+run(`stata -q do stata/main.do`)
+
+# Compile LaTeX tables
+for i ∈ 1:2
+    tectonic() do bin
+       run(`$bin tables/hearnings_$i.tex`)
+    end
+end
+
 ## Define race groups and load parameters for each group
 groups = ["Black", "White"]
 p = Dict(r => generateparameters(r) for r ∈ groups)
@@ -28,28 +38,29 @@ plotmvsd(:wage,
     )
 png("figures/mvsd_wage_dataLS")
 
-## Model simulated hours and employment vs. data
+## Model simulated hours employment, and wage vs. data
 # Simulate model microdata for both groups
 benchmarkmd = Dict(r => solvemodel(p[r]) for r ∈ groups)
 
-# Define ability groupings
-groupings = [1, 2, 3, 4, 5:10]
+# Iterate over ability groupings
+for (ig, groupings) ∈ enumerate([[1, 2, 3, 4, 5:10], [5, 6, 7, 8, 9, 10]])
+    for r ∈ groups
+        # Create vector of subplot titles
+        spttls = ["$r Ability Decile $i" for i ∈ groupings]
 
-for r ∈ groups
-    # Create vector of subplot titles
-    spttls = ["$r Ability Decile $i" for i ∈ groupings]
-
-    # Plot hours and employment rates
-    for s ∈ [:hours, :employed]
-        plotmvsd(s,
-            groupingmean(groupings, statsfbyage(mean, benchmarkmd[r]), p[r]),
-            statsfbyage(mean, catmicrodata(groupings, nlsymd[r])),
-            de = statsfbyage(sterror, catmicrodata(groupings, nlsymd[r])),
-            haxis = p[r].agerange,
-            spttls = spttls,
-            ylms = (0, 1.1)
-            )
-        png("figures/mvsd_$(string(s))_$r")
+        # Plot hours and employment rates
+        for s ∈ [:hours, :employed, :wage]
+            plotmvsd(s,
+                groupingmean(groupings, statsfbyage(mean, benchmarkmd[r]), p[r]),
+                statsfbyage(mean, catmicrodata(groupings, nlsymd[r])),
+                de = statsfbyage(sterror, catmicrodata(groupings, nlsymd[r])),
+                haxis = p[r].agerange,
+                spttls = spttls,
+                ylms = (0, (s == :hours ? 1 : Inf)),
+                lyt = (1, length(groupings))
+                )
+            png("figures/mvsd_$(string(s))_$(r)_$(ig)")
+        end
     end
 end
 
