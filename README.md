@@ -40,7 +40,7 @@ See `stata/main.do`.
 #### Figure 6: Mean hourly wages over the lifecycle conditional on working by AFQT/ability decile (data vs. model)
 ![](figures/mvsd_wage_dataLS.png)
 
-### Figure 7: Hours worked over the lifecycle conditional on employment for AFQT/ability groupings by race (data vs. model)
+#### Figure 7: Hours worked over the lifecycle conditional on employment for AFQT/ability groupings by race (data vs. model)
 ![](figures/mvsd_hours_Black_1.png)
 ![](figures/mvsd_hours_White_1.png)
 
