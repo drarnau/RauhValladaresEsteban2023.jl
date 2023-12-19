@@ -4,10 +4,45 @@
 The user needs to download the raw data from the [National Longitudinal Survey of the Youth 1979](https://www.nlsinfo.org/content/cohorts/nlsy79) and store it in the folder `stata/` following the naming details in `stata/main.do`.
 
 ## `produce_exhibits.jl`
-Produces all the figures and tables displayed below and reported in the paper.
+Execute this file to produce all the figures and tables displayed below and reported in the paper.
+
+As a reference, using the following CPU:
+```shell
+Architecture:                       x86_64
+CPU op-mode(s):                     32-bit, 64-bit
+Byte Order:                         Little Endian
+Address sizes:                      39 bits physical, 48 bits virtual
+CPU(s):                             8
+On-line CPU(s) list:                0-7
+Thread(s) per core:                 2
+Core(s) per socket:                 4
+Socket(s):                          1
+NUMA node(s):                       1
+Vendor ID:                          GenuineIntel
+CPU family:                         6
+Model:                              158
+Model name:                         Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz
+Stepping:                           9
+CPU MHz:                            800.036
+CPU max MHz:                        4200.0000
+CPU min MHz:                        800.0000
+BogoMIPS:                           7200.00
+Virtualisation:                     VT-x
+L1d cache:                          128 KiB
+L1i cache:                          128 KiB
+L2 cache:                           1 MiB
+L3 cache:                           8 MiB
+NUMA node0 CPU(s):                  0-7
+```
+Running the following OS:
+```shell
+Linux 5.4.0-166-generic #183-Ubuntu SMP Mon Oct 2 11:28:33 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+```
+
+The total execution time for `produce_exhibits.jl` is of around 4 hours.
 
 ## Model Documentation
- [![Docs][docs-img]][docs-url]
+[![Docs][docs-img]][docs-url]
 
 [docs-img]: https://img.shields.io/badge/docs-stable-blue.svg
 [docs-url]: https://drarnau.github.io/RauhValladaresEsteban2023.jl/
