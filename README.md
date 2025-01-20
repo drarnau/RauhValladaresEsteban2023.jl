@@ -36,7 +36,9 @@ NUMA node0 CPU(s):                  0-7
 ```
 Running the following OS:
 ```shell
-Linux 5.4.0-166-generic #183-Ubuntu SMP Mon Oct 2 11:28:33 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+Operating System: Ubuntu 20.04.2 LTS
+Kernel: Linux 5.4.0-167-generic
+Architecture: x86-64
 ```
 
 The total execution time for `produce_exhibits.jl` is of around 4 hours.
